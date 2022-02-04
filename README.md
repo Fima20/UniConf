@@ -1,5 +1,7 @@
 A simple shell allows you to quickly save and then load settings or any other project data, based on the "configparser" module. Allows you to save variable types and also supports "datetime".
 
+[PyPi](https://pypi.org/project/UniConf/) 		[GitHub](https://github.com/Fima20/UniConf)
+
 ## Examples
 
 Import:
