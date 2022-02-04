@@ -27,7 +27,7 @@ def conv_bool(str):
     else: raise Exception
 
 def conv_list(str):
-    return list(item for item in str[1:-1:].split(', '))
+    return list(item[1:-1:] for item in str[1:-1:].split(', '))
 
 def conv_dict(str_):
     return ast.literal_eval(str(str_))
