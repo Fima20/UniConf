@@ -4,3 +4,4 @@ venv
 .Python
 /UniConf.egg-info/
 /tests/
+/examples/config.ini

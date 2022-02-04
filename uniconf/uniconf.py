@@ -106,17 +106,20 @@ class Config:
             from: obj:` datetime.datetime`.
         """
 
-        if head:
-            if field:
-                if data:
-                    return self.datadict[head][field][data]
+        try:
+            if head:
+                if field:
+                    if data:
+                        return self.datadict[head][field][data]
+                    else:
+                        return self.list_convert_type[self.datadict[head][field]["type"]](
+                            self.datadict[head][field]["data"])
                 else:
-                    return self.list_convert_type[self.datadict[head][field]["type"]](
-                        self.datadict[head][field]["data"])
+                    return self.datadict[head]
             else:
-                return self.datadict[head]
-        else:
-            return self.datadict
+                return self.datadict
+        except KeyError:
+            print('UniConf: entry not found')
 
     def set(self,
             head: str,
